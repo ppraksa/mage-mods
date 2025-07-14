@@ -1,0 +1,34 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    [data-role="add-to-links"] {
+        width: 100%;
+    }
+
+    .favourites-button {
+        background: @color-blue1;
+        border: 1px solid @color-blue1;
+        padding: 1rem 1.5rem;
+        border-radius: 0;
+        box-shadow: none;
+        color: white;
+        display: block;
+        width: 100%;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &.active:hover,
+        &:hover {
+            background-color: @color-dark-pink1;
+            border: 1px solid @color-dark-pink1;
+            color: white;
+        }
+
+        &.active {
+            background-color: @color-dark-green1;
+            border: 1px solid @color-dark-green1;
+            color: white;
+        }
+    }
+}

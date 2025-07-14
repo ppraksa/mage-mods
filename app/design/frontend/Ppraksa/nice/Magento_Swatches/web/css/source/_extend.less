@@ -1,0 +1,30 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    div.swatch-attribute-options {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+
+        .swatch-option {
+            &.text {
+                &:before {
+                    content: 'Option: ';
+                }
+
+                border-radius: .5rem;
+                margin: 0;
+                padding: .5rem 1.5rem;
+                border: none;
+                text-align: left;
+
+                &:hover {
+                    background-color: #999;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

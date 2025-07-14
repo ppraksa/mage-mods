@@ -1,0 +1,38 @@
+<?php
+/**
+ * @author Paweł Praksa <pawel.praksa@gmail.com>
+ * Copyright © Paweł Praksa s.c. All rights reserved.
+ *
+ *
+ * @var $block \Magento\Catalog\Block\Product\ProductList\Item\Block
+ * @var $escaper \Magento\Framework\Escaper
+ *
+ */
+
+declare(strict_types=1);
+
+if (!$block->getProduct()->getSku()) {
+    return false;
+}
+
+$sku = $block->getProduct()->getSku();
+?>
+<div data-bind="scope: 'favouritesButton_<?= $escaper->escapeHtmlAttr($sku) ?>'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "favouritesButton_<?= $escaper->escapeHtmlAttr($sku) ?>": {
+                        "component": "Magento_Catalog/js/favourites",
+                        "sku": "<?= $escaper->escapeHtmlAttr($sku) ?>"
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+

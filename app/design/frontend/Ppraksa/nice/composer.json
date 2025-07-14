@@ -1,0 +1,17 @@
+{
+  "name": "ppraksa/theme-frontend-nice",
+  "description": "N/A",
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "magento/framework": "*",
+      "magento/theme-frontend-luma": "*"
+  },
+  "type": "magento2-theme",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ]
+  }
+}
