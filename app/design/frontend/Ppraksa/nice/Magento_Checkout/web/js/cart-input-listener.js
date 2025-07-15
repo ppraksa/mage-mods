@@ -7,6 +7,8 @@ define([
 
     /**
      * This script listens for changes in the quantity input fields of the cart
+     * 
+     * @return {void}
      */
     $(document).on('change', 'input[name$="[qty]"]', function () {
         const FORM_ID = '#form-validate';

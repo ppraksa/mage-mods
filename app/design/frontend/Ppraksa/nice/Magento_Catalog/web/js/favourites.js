@@ -48,6 +48,8 @@ define([
 
         /**
          * Toggle favourite status
+         * 
+         * @return {void}
          */
         toggleFavourite: function () {
             this.checked(!this.checked());
@@ -56,6 +58,11 @@ define([
             this.showMessage();
         },
 
+        /**
+         * Toggle text on the button
+         * 
+         * @return {void}
+         */
         toggleBtnTxt: function () {
             this.buttonText(this.checked() ? this.removeFromText : this.addToText);
         },
@@ -65,6 +72,7 @@ define([
          *
          * @param sku
          * @param isAdding
+         * @return {void}
          */
         saveFavourites: function (sku, isAdding) {
             let store = this.getFromStorage();
@@ -110,7 +118,9 @@ define([
 
         /**
          * Show success message after adding/removing from favourites
-         */
+         * 
+         * @return {void}
+         * */
         showMessage: function () {
             const message = this.checked()
                 ? $t('Product has been added to Favourites')
